@@ -1,0 +1,23 @@
+==
+
+==
+{% if breadcrumbs %}
+<div id="header-banner" class="header-banner clearfix">
+    <div id="header-banner-inner" class="container clearfix">
+        <div class="header-banner-inner-wrap">
+            <div class="blog-standar-start">
+                <h1 class="blog-standar-start1">{{ this.page.title }}</h1>
+            </div>
+            <h2 class="blog-standar-end">
+                {% for breadcrumb in breadcrumbs %}
+                    {% if not breadcrumb.isActive %}
+                        <a href="{{ breadcrumb.url }}" class="blog-standar-end">{{ breadcrumb.title }}</a> |
+                        {% else %}
+                        <span class="blog-standar-end">{{ breadcrumb.title }}</span>
+                    {% endif %}
+                {% endfor %}
+            </h2>
+        </div>
+    </div>
+</div>
+{% endif %}

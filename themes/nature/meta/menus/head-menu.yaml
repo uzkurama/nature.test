@@ -1,0 +1,18 @@
+items:
+    -
+        title: menu
+        type: all-static-pages
+        code: ''
+        replace: 1
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+                en:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Head menu'
