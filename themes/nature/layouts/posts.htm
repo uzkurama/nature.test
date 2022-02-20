@@ -1,0 +1,95 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Winter CMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Winter CMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}">
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/style.css'|theme }}">
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/zingbox-icon.css'|theme }}">
+
+        <link rel='stylesheet' href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+        <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper%406.8.3/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper%406.8.3/swiper-bundle.min.js"></script>
+
+        <link rel="stylesheet" href="{{ 'assets/owlcarousel/assets/owl.carousel.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/owlcarousel/assets/owl.theme.default.min.css'|theme }}">
+        <!--[if lt IE 9]>
+            <script src="javascript/html5shiv.js"></script>
+            <script src="javascript/respond.min.js"></script>
+        <![endif]-->
+        {% styles %}
+    </head>
+    <body class="sidebar-right header-style-2 topbar-style-1 menu-has-search header-fixed">
+         <div id="wrapper" class="animsition">
+            <div id="page" class="clearfix">
+                {% partial 'header' %}
+                <div id="header-banner" class="header-banner clearfix">
+                  <div id="header-banner-inner" class="container clearfix">
+                     <div class="header-banner-inner-wrap">
+                        <div class="blog-standar-start">
+                           <h1 class="blog-standar-start1">{{ this.page.meta_title }}</h1>
+                        </div>
+                        <h2 class="blog-standar-end">
+                           <a href="/" class="blog-standar-end">{{ 'Bosh sahifa'|_ }}</a> |
+                           <a href="/posts" class="blog-standar-end">{{ 'Yangiliklar'|_ }}</a> |
+                           <span class="blog-standar-end">{{ this.page.meta_title }}</span>
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+                <div id="main-content" class="site-main clearfix">
+                    {% page %}
+                </div>
+                {% partial 'footer' %}
+            </div>
+        </div>
+         <a id="scroll-top"></a>
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ 'assets/owlcarousel/owl.carousel.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/owlcarousel.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/plugins.js'|theme }}"></script>
+        <script src="{{ 'assets/js/bootstrap.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/animsition.js'|theme }}"></script>
+        <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/countto.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.isotope.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.cookie.js'|theme }}"></script>
+        <script src="{{ 'assets/js/shortcodes.js'|theme }}"></script>
+        <script src="{{ 'assets/js/main.js'|theme }}"></script>
+
+        <script src="{{ 'assets/includes/rev-slider/js/jquery.themepunch.tools.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/jquery.themepunch.revolution.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/rev-slider.js'|theme }}"></script>
+
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.actions.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.carousel.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.kenburn.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.layeranimation.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.migration.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.navigation.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.parallax.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js'|theme }}"></script>
+        <script src="{{ 'assets/includes/rev-slider/js/extensions/revolution.extension.video.min.js'|theme }}"></script>
+
+        <script src="{{ 'assets/js/wow.js'|theme }}"></script>
+
+        <script src="{{ 'assets/js/swiper.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

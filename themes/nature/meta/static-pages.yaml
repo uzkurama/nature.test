@@ -1,2 +1,6 @@
 static-pages:
-    birlashma-haqida: {  }
+    birlashma-haqida:
+        birlashma-haqida-birlashma-ustavi: {  }
+        birlashma-haqida-rahbariyat: {  }
+    loyihalar: {  }
+    takliflar: {  }

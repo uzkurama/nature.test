@@ -13,4 +13,12 @@
         {% endif %}
     </li>
     {% endfor %}
+    <li class="menu-item menu-item-has-children">
+        <a class="active down" href="#">{{ activeLocaleName }}</a>
+        <ul class="sub-menu ">
+            <li class="menu-item"><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'uz'">O‘zbek</a></li>
+            <li class="menu-item"><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">Русский</a></li>
+            <li class="menu-item"><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">English</a></li>
+        </ul>
+    </li>
 </ul>

@@ -1,8 +1,12 @@
 items:
     -
         title: menu
+        nesting: null
         type: all-static-pages
+        url: null
         code: ''
+        reference: null
+        cmsPage: null
         replace: 1
         viewBag:
             locale:
@@ -11,6 +15,22 @@ items:
                     url: ''
                 en:
                     title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Yangiliklar
+        type: url
+        url: /news
+        code: ''
+        viewBag:
+            locale:
+                ru:
+                    title: Новости
+                    url: ''
+                en:
+                    title: News
                     url: ''
             isHidden: '0'
             cssClass: ''

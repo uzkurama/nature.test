@@ -780,7 +780,7 @@ body.page #main-content {
 
 .sidebar-right #site-content {
 	float: left;
-	width: 66.38%
+	/* width: 66.38% */
 }
 
 .sidebar-right #sidebar {
@@ -965,11 +965,11 @@ body.page #main-content {
 #site-logo {
 	width: 22.5%;
 	margin: -102px 0 0;
-	padding: 50px 0;
+	padding: 20px 0;
 	background-color: #fff;
 	position: absolute;
 	z-index: 3;
-	box-shadow: 0 5px 10px rgb(0 0 0/7%)
+	box-shadow: 0 5px 10px rgb(0 0 0/7%);
 }
 
 #site-logo-inner {
@@ -1664,7 +1664,6 @@ body.page #main-content {
 	display: table-cell;
 	vertical-align: middle;
 	width: 40%;
-	text-align: right;
 	padding-right: 15px
 }
 
@@ -2844,4 +2843,10 @@ body.page #main-content {
 
 #scroll-top:hover:before {
 	background-color: #ff7029
+}
+
+#site-content img {
+	max-width: 100%;
+    height: auto;
+	margin-bottom: 1em;
 }

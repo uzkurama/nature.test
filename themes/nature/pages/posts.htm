@@ -1,0 +1,57 @@
+title = "Posts"
+url = "/posts/:slug"
+layout = "posts"
+is_hidden = 0
+
+[localePicker]
+forceUrl = 1
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "posts"
+==
+<?php
+function onEnd(){
+   $this->page->meta_title = $this->post->title;
+   $this->page->meta_description = $this->post->excerpt;
+   if(!$this->post){
+      return App::make('Cms/Classes/Controller')->setStatusCode('404')->run('404');
+   }
+}
+?>
+==
+
+<div id="content-wrap" class="container">
+   <div id="site-content" class="site-content clearfix">
+      <div id="inner-content" class="inner-content-wrap">
+         <article class="hentry data-effect">
+            <div class="post-media clerafix">
+               <img src="{{ post.metadata.banner_image|media }}" alt="{{ post.title }}">
+            </div>
+            <div class="post-content-wrap clearfix">
+               <div class="post-meta">
+                  <div class="post-meta-content">
+                     <div class="post-meta-content-inner">
+                        <span class="post-date item"><span class="inner"><span class="entry-date">{{ post.published_at|date('d/m/Y') }}</span></span></span>
+                     </div>
+                  </div>
+               </div>
+               <h6 class="post-title-detail">
+                  <span class="post-title-inner">{{post.title}}</span>
+               </h6>
+               <div class="post-content">{{ post.content_html|raw }}</div>
+               <div class="post-tags-socials clearfix">
+                  <div class="post-socials">
+                     <span class="title">{{ 'Ulashish'|_ }} :</span>
+                     <div class="socical-icon">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ this.controller.currentPageUrl() }}" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://t.me/share/url?url={{ this.controller.currentPageUrl() }}" class="telegram"><i class="fa fa-telegram"></i></a>
+                        <a href="http://twitter.com/share?url={{ this.controller.currentPageUrl() }}" class="twitter"><i class="fa fa-twitter"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </article>
+      </div>
+   </div>
+</div>

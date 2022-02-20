@@ -1,0 +1,42 @@
+[viewBag]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "posts"
+==
+<div class="row-articles">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="themesflat-spacer clearfix" data-desktop="175" data-mobile="120" data-smobile="120"></div>
+		</div>
+		<div class="themesflat-headings style-2 wow fadeInUp article">
+			<h1 class="heading ">{{ 'So‘ngi yangiliklar'|_ }}</h1>
+		</div>
+		<div class="owl-carousel owl-theme" data-item="3" data-item2="2">
+			{% for post in blogPosts.posts %}
+			<div class="item acticle">
+				<div class="img">
+					<div class="img-overlay"></div>
+					<img src="{{ post.metadata.banner_image|media }}" alt="Image">
+				</div>
+				<ul>
+					<li><a class="date-articles" href="blog-detail.html">{{ post.published_at|date('d/m/Y') }}</a></li>
+				</ul>
+				<div class="box-acticle">
+					<a href="{{ post.url }}" class="link-articles">{{ post.title }}</a>
+					<p class="content">{{ post.content|slice(0,200)|raw }}</p>
+					<i class="line"></i>
+						<a href="{{ post.url }}" class="btn-read-more">{{ 'Batafsil'|_ }}</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="col-md-12">
+			<div class="themesflat-spacer clearfix" data-desktop="120" data-mobile="60" data-smobile="60"></div>
+		</div>
+	</div>
+</div>
